@@ -92,7 +92,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=tmpfs,dst=/tmp \
     dnf5 -y install \
         https://github.com/bazzite-org/cicpoffs/releases/download/master/cicpoffs.rpm && \
-    dnf5 -y install \
+    dnf5 -y install --skip-unavailable \
         bazaar \
         libdex-0.9.1 \
         iwd \
