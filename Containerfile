@@ -33,6 +33,7 @@ RUN --mount=type=cache,dst=/var/cache \
         ["terra-mesa"]="mesa-filesystem" \
         ["copr:copr.fedorainfracloud.org:ublue-os:staging"]="fwupd" \
     ) && \
+    mkdir -p /var/roothome && \
     for repo in "${!toswap[@]}"; do \
         for package in ${toswap[$repo]}; do dnf5 -y swap --repo=$repo $package $package; done; \
     done && unset -v toswap repo package && \
@@ -65,7 +66,7 @@ RUN --mount=type=cache,dst=/var/cache \
         fwupd-plugin-flashrom \
         fwupd-plugin-modem-manager \
         fwupd-plugin-uefi-capsule-data && \
-    dnf5 versionlock remove mesa-va-drivers.i686 && \
+    dnf5 versionlock exclude mesa-va-drivers.i686 && \
     dnf5 -y install \
         mesa-va-drivers.i686 && \
     dnf5 versionlock add mesa-va-drivers.i686 && \
