@@ -65,8 +65,10 @@ RUN --mount=type=cache,dst=/var/cache \
         fwupd-plugin-flashrom \
         fwupd-plugin-modem-manager \
         fwupd-plugin-uefi-capsule-data && \
+    dnf5 versionlock remove mesa-va-drivers.i686 && \
     dnf5 -y install \
         mesa-va-drivers.i686 && \
+    dnf5 versionlock add mesa-va-drivers.i686 && \
     dnf5 -y install --enable-repo="*rpmfusion*" --disable-repo="*fedora-multimedia*" \
         libaacs \
         libbdplus \
