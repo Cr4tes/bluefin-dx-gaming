@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+mkdir -p /var/roothome
+
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
