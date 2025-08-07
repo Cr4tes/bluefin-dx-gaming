@@ -15,7 +15,9 @@ mkdir -p /var/roothome
 dnf5 install -y lutris \
     steam
 
-# compile gnome customizations
+# compile gnome customizations and rotate dinos
+HARDCODED_RPM_MONTH="12"
+sed -i "/picture-uri/ s/${HARDCODED_RPM_MONTH}/$(date +%m)/" "/usr/share/glib-2.0/schemas/zz0-bluefin-modifications.gschema.override"
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # Use a COPR Example:
