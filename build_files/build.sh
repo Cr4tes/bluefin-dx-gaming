@@ -15,6 +15,9 @@ mkdir -p /var/roothome
 dnf5 install -y lutris \
     steam
 
+# compile custom schemas
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
