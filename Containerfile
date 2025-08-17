@@ -4,7 +4,7 @@ COPY build_files /
 
 # Base Image
 FROM ghcr.io/ublue-os/bluefin-dx:latest
-COPY schemas/zz0-bluefin-modifications.gschema.override /usr/share/glib-2.0/schemas/
+COPY schemas/* /usr/share/glib-2.0/schemas/
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
