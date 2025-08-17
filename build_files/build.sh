@@ -15,12 +15,6 @@ mkdir -p /var/roothome
 dnf5 install -y lutris \
     steam
 
-# compile gnome customizations and rotate dinos
-HARDCODED_RPM_MONTH="12"
-sed -i "/picture-uri/ s/${HARDCODED_RPM_MONTH}/$(date +%m)/" "/usr/share/glib-2.0/schemas/zz0-bluefin-modifications.gschema.override"
-glib-compile-schemas /usr/share/glib-2.0/schemas
-cat /usr/share/glib-2.0/schemas/zz0-bluefin-modifications.gschema.override | grep picture-uri
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
