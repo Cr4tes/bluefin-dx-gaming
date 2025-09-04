@@ -1,3 +1,6 @@
+[org.gnome.shell]
+favorite-apps=['firefox.desktop', 'org.mozilla.Thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.Thunderbird.desktop', 'code.desktop', 'steam.desktop', 'com.discordapp.Discord.desktop', 'it.mijorus.gearlever']
+
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
 
