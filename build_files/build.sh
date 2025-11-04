@@ -15,7 +15,7 @@ mkdir -p /var/roothome
 dnf5 remove -y mesa-vulkan-drivers-1:25.2.5-1.fc43.x86_64
 
 # this installs a package from fedora repos
-dnf5 install -y --replacefiles lutris
+dnf5 install -y lutris
 
 # compile custom schemas
 glib-compile-schemas /usr/share/glib-2.0/schemas
