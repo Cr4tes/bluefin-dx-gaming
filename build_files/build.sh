@@ -11,11 +11,9 @@ mkdir -p /var/roothome
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# cleaning up drivers to be able to install steam and lutris
-dnf5 remove -y mesa-vulkan-drivers-1:25.2.5-1.fc43.x86_64
-
 # this installs a package from fedora repos
-dnf5 install -y lutris
+dnf5 install -y lutris /
+    steam
 
 # compile custom schemas
 glib-compile-schemas /usr/share/glib-2.0/schemas
