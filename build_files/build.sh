@@ -14,7 +14,7 @@ mkdir -p /var/roothome
 # this installs a package from fedora repos
 dnf5 install -y lutris \
     steam \
-    --force
+    --allowerasing
 
 # compile custom schemas
 glib-compile-schemas /usr/share/glib-2.0/schemas
