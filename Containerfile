@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bluefin-dx:latest
+FROM ghcr.io/ublue-os/bluefin-dx:stable
 COPY schemas/* /usr/share/glib-2.0/schemas/
 
 ## Other possible base images include:
