@@ -12,7 +12,7 @@ mkdir -p /var/roothome
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y --allowerasing lutris \
+dnf5 install -y lutris \
     steam
 
 # compile custom schemas
@@ -27,4 +27,4 @@ glib-compile-schemas /usr/share/glib-2.0/schemas
 
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+# systemctl enable podman.socket
